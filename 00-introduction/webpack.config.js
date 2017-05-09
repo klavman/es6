@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 const config = {
-  entry: path.join(__dirname, 'src'),
+  entry: path.join(__dirname, 'src/'),
   output: {
-  	path: path.join(__dirname, 'dist'),
+  	path: path.join(__dirname, 'dist/'),
     filename: 'bundle.js'
   },
 
@@ -15,7 +15,7 @@ const config = {
   		exclude: /node_modules/
   	}]
   },
-  plugins: [
+/*  plugins: [
 
   	new webpack.optimize.UglifyJsPlugin({
   		compress: {
@@ -23,7 +23,7 @@ const config = {
   		}
 
   	})
-  ]
+  ]*/
 };
 
 module.exports = config;
