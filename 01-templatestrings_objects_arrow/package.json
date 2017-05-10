@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "babel": "babel src --out-dir dist",
     "start": "babel-node",
     "dev": "webpack-dev-server --config dev.webpack.config.js"
   },
