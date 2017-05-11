@@ -1,12 +1,13 @@
-const N_ABC = 15;
+'use strict';
+
+var N_ABC = 15;
 console.log(N_ABC);
 
 // N_ABC = 10;
 
 console.log(N_ABC);
 
-
-const USER = {
+var USER = {
 	name: 'Charlie',
 	surname: 'Sheen',
 	age: null
