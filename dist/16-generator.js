@@ -126,6 +126,8 @@ try {
 
 		console.log(word);
 	}
+
+	// ex2
 } catch (err) {
 	_didIteratorError = true;
 	_iteratorError = err;
@@ -137,6 +139,118 @@ try {
 	} finally {
 		if (_didIteratorError) {
 			throw _iteratorError;
+		}
+	}
+}
+
+var arr_people = [{ sex: 'M', name: 'Charles' }, { sex: 'W', name: 'Cristine' }];
+
+var Users = function () {
+	function Users(people) {
+		_classCallCheck(this, Users);
+
+		this._people = people;
+	}
+
+	_createClass(Users, [{
+		key: 'alias',
+		value: regeneratorRuntime.mark(function alias() {
+			var _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, person;
+
+			return regeneratorRuntime.wrap(function alias$(_context4) {
+				while (1) {
+					switch (_context4.prev = _context4.next) {
+						case 0:
+							_iteratorNormalCompletion2 = true;
+							_didIteratorError2 = false;
+							_iteratorError2 = undefined;
+							_context4.prev = 3;
+							_iterator2 = this._people[Symbol.iterator]();
+
+						case 5:
+							if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
+								_context4.next = 12;
+								break;
+							}
+
+							person = _step2.value;
+							_context4.next = 9;
+							return person.sex === 'M' ? 'Mr. ' + person.name : 'Mrs. ' + person.name;
+
+						case 9:
+							_iteratorNormalCompletion2 = true;
+							_context4.next = 5;
+							break;
+
+						case 12:
+							_context4.next = 18;
+							break;
+
+						case 14:
+							_context4.prev = 14;
+							_context4.t0 = _context4['catch'](3);
+							_didIteratorError2 = true;
+							_iteratorError2 = _context4.t0;
+
+						case 18:
+							_context4.prev = 18;
+							_context4.prev = 19;
+
+							if (!_iteratorNormalCompletion2 && _iterator2.return) {
+								_iterator2.return();
+							}
+
+						case 21:
+							_context4.prev = 21;
+
+							if (!_didIteratorError2) {
+								_context4.next = 24;
+								break;
+							}
+
+							throw _iteratorError2;
+
+						case 24:
+							return _context4.finish(21);
+
+						case 25:
+							return _context4.finish(18);
+
+						case 26:
+						case 'end':
+							return _context4.stop();
+					}
+				}
+			}, alias, this, [[3, 14, 18, 26], [19,, 21, 25]]);
+		})
+	}]);
+
+	return Users;
+}();
+
+var users = new Users(arr_people);
+
+var _iteratorNormalCompletion3 = true;
+var _didIteratorError3 = false;
+var _iteratorError3 = undefined;
+
+try {
+	for (var _iterator3 = users.alias()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+		var person = _step3.value;
+
+		console.log(person);
+	}
+} catch (err) {
+	_didIteratorError3 = true;
+	_iteratorError3 = err;
+} finally {
+	try {
+		if (!_iteratorNormalCompletion3 && _iterator3.return) {
+			_iterator3.return();
+		}
+	} finally {
+		if (_didIteratorError3) {
+			throw _iteratorError3;
 		}
 	}
 }
